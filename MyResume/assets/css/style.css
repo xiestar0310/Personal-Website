@@ -244,17 +244,41 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
-  width: 100%;
-  height: 100vh;
-  background: url("../img/hero-bg6.jpg") top right no-repeat;
+#hero #particles-js{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url(../img/hero-bg6.jpg);
+  height:100vh;
   background-size: cover;
+  background-position: center;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
   position: relative;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero h1 {
+  font-family: "Satisfy", serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: white;
+}
+
+#hero p{
+  color: white;
+  margin: 15px 0 0 0;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (min-width: 992px) {
-  #hero {
-    padding-left: 41px;
+  .welcome {
+    margin-left:50%;
+    top:50%;
   }
 }
 
@@ -275,6 +299,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 56px;
   color: white;
+}
+
+#hero .welcome{
+  margin-left: 44%;
+  top: 33%;
+  position: absolute;
 }
 
 #hero p {
