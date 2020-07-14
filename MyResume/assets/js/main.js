@@ -28,6 +28,13 @@
       backDelay: 2000
     });
   }
+  
+  $(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+      return false;
+    });
+  });
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
   $(document).on('click', '.nav-menu a, .scrollto', function(e) {
